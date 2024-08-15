@@ -1,0 +1,125 @@
+{
+  "name": "umbra-folio",
+  "description": "Inanis Umbra Portfolio",
+  "version": "1.0.0",
+  "author": "Derek Musser<@inanisumbra>",
+  "license": "MIT",
+  "scripts": {
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "format": "prettier  --ignore-path .gitignore ./ --write \"./**/*.{js,jsx,json,md}\"",
+    "lint": "eslint --ext .js --ignore-path .gitignore ./",
+    "lint:fix": "eslint --fix --ext .js --ignore-path .gitignore ./",
+    "commit:pre": "npm run format && npm run lint:fix && git add ."
+  },
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@fontsource/source-sans-pro": "latest",
+    "@react-spring/parallax": "latest",
+    "dotenv": "latest",
+    "gatsby": "latest",
+    "gatsby-plugin-compile-es6-packages": "latest",
+    "gatsby-plugin-emotion": "latest",
+    "gatsby-plugin-image": "^2.24.0",
+    "gatsby-plugin-manifest": "latest",
+    "gatsby-plugin-robots-txt": "latest",
+    "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-plugin-sitemap": "latest",
+    "gatsby-plugin-smoothscroll": "latest",
+    "gatsby-source-filesystem": "latest",
+    "gatsby-transformer-sharp": "^4.24.0",
+    "nodemailer": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-helmet": "latest",
+    "react-spring": "latest",
+    "tailwindcss": "latest",
+    "twin.macro": "latest",
+    "typeface-cantata-one": "latest",
+    "unfetch": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "babel-eslint": "latest",
+    "babel-loader": "latest",
+    "babel-preset-gatsby": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "pre-commit": "latest",
+    "prettier": "latest"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "globals": {
+      "tw": true,
+      "task": true
+    },
+    "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:react/jsx-runtime"
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "env": {
+      "es6": false,
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 8
+    },
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/prop-types": "error",
+      "no-mixed-spaces-and-tabs": "off"
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "babel-preset-gatsby",
+        {
+          "reactRuntime": "automatic",
+          "reactImportSource": "@emotion/react",
+          "targets": {
+            "browsers": [
+              ">0.25%",
+              "not dead"
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
+  },
+  "pre-commit": [
+    "commit:pre"
+  ],
+  "engines": {
+    "node": "<=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inanisumbra/umbra-folio"
+  },
+  "bugs": {
+    "url": "https://github.com/inanisumbra/umbra-folio/issues"
+  }
+}
