@@ -1,17 +1,14 @@
 # Inanis Umbra
 
-- [Now Hosted](https://umbra-folio.now.sh) - Hosting via now.sh
-- [Firebase Hosted](https://umbra-folio.firebaseapp.com) - Hosting via Firebase
-
 Just another version of my portfolio that uses:
 
+- TypeScript
 - React Spring
 - TailwindCSS
-- Styled Components
-  instead of my normal _SCSS schema_.
+- Twin.Macro
 
 Also moved everything into hooks and removed all Class Components.
-Made on _Gatsby.js_
+Made on _Next_.js_
 
 ## Getting Started
 
@@ -19,7 +16,7 @@ Made on _Gatsby.js_
 git clone https://github.com//inanisumbra/umbra-folio/
 cd <path-to>/umbra-folio/
 yarn[or NPM] install
-gatsby[or NPM/yarn] develop
+next[or NPM/yarn] dev
 ```
 
 ## Deployment
@@ -27,18 +24,15 @@ gatsby[or NPM/yarn] develop
 Deploy with:
 
 ```
-now --public
-//OR
-yarn[or npm run] deploy
-//script runs gatsby clean && gatsby build && firebase deploy
+vercel
+
 ```
 
 ## Built With
 
-- [Gatsby.js](https://www.gatsbyjs.org/) - Static sites using Next.js and GraphQL
-- [Firebase](https://firebase.google.com/) - Used for a systemless backend
+- [Next.js](https://nextjs.org/) - Static sites using React
+- [Twin.Macro](https://github.com/ben-rogerson/twin.macro) - TailwindCSS integration into Emotion/Styled Components 
 - [TailwindCSS](https://tailwindcss.com/) - Style Macros
-- [Styled Components](https://www.styled-components.com/) - Just google it dumb ass
 - [React Spring](https://www.react-spring.io/) - For the Parallax
 
 ## Authors

@@ -1,0 +1,6 @@
+{
+  // Base configuration for JavaScript files
+  "extends": [
+    "next/core-web-vitals" // Next.js core web vitals plugin to avoid build warning
+  ]
+}

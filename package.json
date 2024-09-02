@@ -1,125 +1,65 @@
 {
   "name": "umbra-folio",
-  "description": "Inanis Umbra Portfolio",
-  "version": "1.0.0",
-  "author": "Derek Musser<@inanisumbra>",
-  "license": "MIT",
+  "version": "0.1.0",
+  "private": false,
   "scripts": {
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "build": "gatsby build",
-    "clean": "gatsby clean",
-    "format": "prettier  --ignore-path .gitignore ./ --write \"./**/*.{js,jsx,json,md}\"",
-    "lint": "eslint --ext .js --ignore-path .gitignore ./",
-    "lint:fix": "eslint --fix --ext .js --ignore-path .gitignore ./",
-    "commit:pre": "npm run format && npm run lint:fix && git add ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
+    "test": "jest"
   },
   "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
-    "@fontsource/source-sans-pro": "latest",
-    "@react-spring/parallax": "latest",
-    "dotenv": "latest",
-    "gatsby": "latest",
-    "gatsby-plugin-compile-es6-packages": "latest",
-    "gatsby-plugin-emotion": "latest",
-    "gatsby-plugin-image": "^2.24.0",
-    "gatsby-plugin-manifest": "latest",
-    "gatsby-plugin-robots-txt": "latest",
-    "gatsby-plugin-sharp": "^4.24.0",
-    "gatsby-plugin-sitemap": "latest",
-    "gatsby-plugin-smoothscroll": "latest",
-    "gatsby-source-filesystem": "latest",
-    "gatsby-transformer-sharp": "^4.24.0",
-    "nodemailer": "latest",
-    "prop-types": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-helmet": "latest",
-    "react-spring": "latest",
-    "tailwindcss": "latest",
-    "twin.macro": "latest",
-    "typeface-cantata-one": "latest",
-    "unfetch": "latest"
+    "@babel/plugin-syntax-typescript": "^7.25.4",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/source-sans-pro": "^5.0.8",
+    "@react-spring/parallax": "^9.7.4",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-twin": "^1.1.0",
+    "next": "14.2.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "twin.macro": "^3.4.1"
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "babel-eslint": "latest",
-    "babel-loader": "latest",
-    "babel-preset-gatsby": "latest",
-    "eslint-plugin-react": "latest",
-    "eslint-plugin-react-hooks": "latest",
-    "pre-commit": "latest",
-    "prettier": "latest"
-  },
-  "prettier": {
-    "endOfLine": "lf",
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5"
-  },
-  "eslintConfig": {
-    "globals": {
-      "tw": true,
-      "task": true
-    },
-    "extends": [
-      "react-app",
-      "eslint:recommended",
-      "plugin:react/jsx-runtime"
-    ],
-    "plugins": [
-      "react-hooks"
-    ],
-    "env": {
-      "es6": false,
-      "node": true
-    },
-    "parserOptions": {
-      "sourceType": "module",
-      "ecmaVersion": 8
-    },
-    "rules": {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      "react/prop-types": "error",
-      "no-mixed-spaces-and-tabs": "off"
-    }
-  },
-  "babel": {
-    "presets": [
-      [
-        "babel-preset-gatsby",
-        {
-          "reactRuntime": "automatic",
-          "reactImportSource": "@emotion/react",
-          "targets": {
-            "browsers": [
-              ">0.25%",
-              "not dead"
-            ]
-          }
-        }
-      ]
-    ]
+    "@babel/core": "^7.25.2",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@svgr/webpack": "^8.1.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@types/node": "^20",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "babel-loader": "^9.1.3",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-next": "^14.2.7",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "eslint-plugin-unused-imports": "^4.1.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "url-loader": "^4.1.1"
   },
   "babelMacros": {
     "twin": {
       "preset": "emotion"
     }
-  },
-  "pre-commit": [
-    "commit:pre"
-  ],
-  "engines": {
-    "node": "<=16"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/inanisumbra/umbra-folio"
-  },
-  "bugs": {
-    "url": "https://github.com/inanisumbra/umbra-folio/issues"
   }
 }

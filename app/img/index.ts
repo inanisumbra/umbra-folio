@@ -1,0 +1,7 @@
+export { default as bash } from "./bash.svg"
+export { default as clients } from "./clients.svg"
+export { default as clientsMain } from "./clients-main.svg"
+export { default as cloud } from "./cloud.svg"
+export { default as earth } from "./earth.svg"
+export { default as server } from "./server.svg"
+export { default as stars } from "./stars.svg"
