@@ -9,17 +9,17 @@ import type { IParallax } from "@react-spring/parallax"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 import React, { useRef } from "react"
 
-import { bash, clientsMain, cloud, earth, server } from "../img"
+import { bash, clients, clientsMain, cloud, earth, server, stars } from "../img"
 
 export default function ParallaxPage() {
   const parallax = useRef<IParallax>(null!)
   return (
-    <div css={[tw`w-full h-full bg-slate-700`]}>
+    <div style={{ width: '100%', height: '100%', backgroundColor: ' rgb(51 65 85)' }}>
       <Parallax ref={parallax} pages={3}>
-        <ParallaxLayer offset={1} speed={1} css={[tw`bg-rose-200/75`]} />
-        <ParallaxLayer offset={2} speed={1} css={[tw`border-indigo-300`]} />
+        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'rgb(254 205 211)' }} />
+        <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: 'rgb(165 180 252)' }} />
 
-        <ParallaxLayer offset={0} speed={0} factor={3} css={[tw`bg-stars bg-cover`]} />
+        <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} />
 
         <ParallaxLayer
           offset={1.3}
@@ -104,7 +104,7 @@ export default function ParallaxPage() {
         <ParallaxLayer
           offset={2}
           speed={-0.3}
-          css={[tw`bg-clients bg-center [background-size: 80% ]`]}
+          style={{ backgroundImage: `url(${clients})`, backgroundSize: '80%', backgroundPosition: 'center' }}
         />
 
         <ParallaxLayer
