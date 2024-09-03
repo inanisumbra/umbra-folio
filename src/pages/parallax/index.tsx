@@ -3,20 +3,18 @@
 
 "use client"
 
-import tw from "twin.macro"
-
 import type { IParallax } from "@react-spring/parallax"
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 import React, { useRef } from "react"
 
-import { bash, clients, clientsMain, cloud, earth, server, stars } from "../img"
+import { bash, clients, clientsMain, cloud, earth, server, stars } from "./_img"
 
 export default function ParallaxPage() {
   const parallax = useRef<IParallax>(null!)
   return (
-    <div style={{ width: '100%', height: '100%', backgroundColor: ' rgb(51 65 85)' }}>
+    <div style={{ width: '100%', height: '100vh', backgroundColor: ' rgb(51 65 85)' }}>
       <Parallax ref={parallax} pages={3}>
-        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'rgb(254 205 211)' }} />
+        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'rgb(154 105 141)' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: 'rgb(165 180 252)' }} />
 
         <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: `url(${stars})`, backgroundSize: 'cover' }} />
